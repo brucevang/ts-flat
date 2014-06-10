@@ -1,0 +1,59 @@
+button {
+  border: 0;
+  outline: none;
+  font-family: 'proxima-nova-bold'; }
+
+.button {
+  padding: 8px 30px;
+  margin-right: 25px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: pointer;
+  float: left;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none; }
+
+.color-primary, .color-primary:hover, .color-blue:hover, .color-secondary:hover {
+  -webkit-transition: 0.08s linear background;
+  transition: 0.08s linear background; }
+
+.color-primary:active, .color-blue:active, .color-secondary:active {
+  -webkit-transition: 0s linear background;
+  transition: 0s linear background; }
+
+.color-primary {
+  background: #20970b;
+  color: white; }
+  .color-primary:hover {
+    background: #22a10c; }
+  .color-primary:active {
+    background: #1e8d0a;
+    color: #f7f7f7; }
+
+.color-blue {
+  background: #2d61a2;
+  color: white; }
+  .color-blue:hover {
+    background: #2f66aa; }
+  .color-blue:active {
+    background: #2b5c9a;
+    color: #f7f7f7; }
+
+.color-secondary {
+  background: #f8f8f8;
+  color: #2f66aa;
+  -webkit-box-shadow: 0px 0px 0px 1px #ccc inset;
+  box-shadow: 0px 0px 0px 1px #ccc inset; }
+  .color-secondary:hover {
+    background: #fdfdfd;
+    -webkit-box-shadow: 0px 0px 0px 1px #ccc inset;
+    box-shadow: 0px 0px 0px 1px #ccc inset; }
+  .color-secondary:active {
+    background: #f3f3f3;
+    color: #2a5a96;
+    -webkit-box-shadow: 0px 0px 0px 1px #ccc inset;
+    box-shadow: 0px 0px 0px 1px #ccc inset; }

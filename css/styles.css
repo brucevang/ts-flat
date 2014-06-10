@@ -1,0 +1,188 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.delay {
+  opacity: 0; }
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(150px);
+    transform: translateY(150px); }
+
+  70% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px); }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    transform: translateY(150px); }
+
+  70% {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px); }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); } }
+.fade {
+  -webkit-animation: fade .6s;
+  -ms-animation: fade 1s infinite;
+  animation: fade 1s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.animation-bounce-on {
+  -webkit-animation: fade 0.5s 0.4s, bounce 0.7s 0.4s cubic-bezier(0, 1.4, 0.5, 1.52);
+  animation: fade 0.5s 0.4s, bounce 0.7s 0.4s cubic-bezier(0, 1.4, 0.5, 1.52);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+@font-face {
+  font-family: 'BLOKKRegular';
+  src: url("../fonts/BLOKKNeue-Regular.eot");
+  src: url("../fonts/BLOKKNeue-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/BLOKKNeue-Regular.woff") format("woff"), url("../fonts/BLOKKNeue-Regular.svg#BLOKK") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("../fonts/ProximaNova-Regular-webfont.eot");
+  src: url("../fonts/ProximaNova-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular-webfont.woff") format("woff"), url("../fonts/ProximaNova-Regular-webfont.svg#BLOKK") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'proxima-nova-semi-bold';
+  src: url("../fonts/ProximaNova-Sbold-webfont.eot");
+  src: url("../fonts/ProximaNova-Sbold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Sbold-webfont.woff") format("woff"), url("../fonts/ProximaNova-Sbold-webfont.svg#BLOKK") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'proxima-nova-bold';
+  src: url("../fonts/ProximaNova-Bold-webfont.eot");
+  src: url("../fonts/ProximaNova-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold-webfont.woff") format("woff"), url("../fonts/ProximaNova-Bold-webfont.svg#BLOKK") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+p {
+  font-family: 'BLOKKRegular';
+  color: #eee;
+  padding: 0 30px;
+  font-size: 19px;
+  line-height: 1.0em; }
+
+h3 {
+  padding: 30px 0 0 30px;
+  font-size: 20px; }
+
+button {
+  border: 0;
+  outline: none;
+  font-family: 'proxima-nova-bold'; }
+
+.color-primary, .color-primary:hover, .color-blue:hover, .color-secondary:hover {
+  -webkit-transition: 0.08s linear background;
+  transition: 0.08s linear background; }
+
+.color-primary:active, .color-blue:active, .color-secondary:active {
+  -webkit-transition: 0s linear background;
+  transition: 0s linear background; }
+
+.color-primary {
+  background: #20970b;
+  color: white; }
+  .color-primary:hover {
+    background: #22a10c; }
+  .color-primary:active {
+    background: #1e8d0a;
+    color: #f7f7f7; }
+
+.color-blue {
+  background: #2d61a2;
+  color: white; }
+  .color-blue:hover {
+    background: #2f66aa; }
+  .color-blue:active {
+    background: #2b5c9a;
+    color: #f7f7f7; }
+
+.color-secondary {
+  background: #f8f8f8;
+  color: #2f66aa;
+  -webkit-box-shadow: 0px 0px 0px 1px #ccc inset;
+  box-shadow: 0px 0px 0px 1px #ccc inset; }
+  .color-secondary:hover {
+    background: #fdfdfd;
+    -webkit-box-shadow: 0px 0px 0px 1px #ccc inset;
+    box-shadow: 0px 0px 0px 1px #ccc inset; }
+  .color-secondary:active {
+    background: #f3f3f3;
+    color: #2a5a96;
+    -webkit-box-shadow: 0px 0px 0px 1px #ccc inset;
+    box-shadow: 0px 0px 0px 1px #ccc inset; }
+
+.button {
+  padding: 8px 30px;
+  margin-right: 25px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: pointer;
+  float: left;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #eeeeee;
+  font-family: "proxima-nova", "Museo Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px; }
+
+h3 {
+  font-family: 'proxima-nova-bold'; }
+
+.modal {
+  background: white;
+  margin: 120px 150px;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  height: 300px;
+  width: 900px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 2px rgba(68, 68, 68, 0.04);
+  box-shadow: 0px 2px 2px rgba(68, 68, 68, 0.04); }
+
+.wrapper {
+  position: absolute;
+  right: 30px;
+  bottom: 30px; }

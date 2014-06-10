@@ -1,0 +1,116 @@
+
+$color-green: #20970B;
+$color-blue: #2D61A2;
+$color-grey: #F8F8F8;
+$color-white: #fff;
+
+$color-text: $color-white;
+$color-text-blue: #2f66aa;
+
+// Settings Button Standard
+$border-radius-button: 5px;
+$button-padding: 8px 30px;
+$button-font-size: 15px;
+
+button {
+  border: 0;
+  outline: none;
+  font-family: 'proxima-nova-bold';
+}
+
+%animate-background {
+  -webkit-transition: 0.08s linear background;
+  -moz-transition: 0.08s linear background;
+  transition: 0.08s linear background;
+}
+
+%animate-background-click {
+  -webkit-transition: 0s linear background;
+  -moz-transition: 0s linear background;
+  transition: 0s linear background;
+}
+
+// Button colors
+%btn-green {
+  background: $color-green;
+  color: $color-white;
+  @extend %animate-background;
+
+  &:hover {
+    background: lighten($color-green,2%);
+    @extend %animate-background;
+  }
+
+  &:active {
+    background: darken($color-green,2%);
+    color: darken($color-white, 3%);
+    @extend %animate-background-click;
+  }
+}
+
+%btn-blue {
+  background: $color-blue;
+  color: $color-text;
+
+  &:hover {
+    background: lighten($color-blue,2%);
+    @extend %animate-background;
+  }
+
+  &:active {
+    background: darken($color-blue,2%);
+    color: darken($color-white, 3%);
+    @extend %animate-background-click;
+  }
+}
+
+%btn-grey {
+  background: $color-grey;
+  color: $color-text-blue;
+  box-shadow: 0px 0px 0px 1px #ccc inset;
+
+  &:hover {
+    background: lighten($color-grey,2%);
+    box-shadow: 0px 0px 0px 1px #ccc inset;
+    @extend %animate-background;
+  }
+
+  &:active {
+    background: darken($color-grey,2%);
+    color: darken($color-blue, 3%);
+    box-shadow: 0px 0px 0px 1px #ccc inset;
+    @extend %animate-background-click;
+  }
+}
+
+.button {
+  padding: $button-padding;
+  margin-right: 25px;
+  -moz-border-radius: $border-radius-button;
+  -webkit-border-radius: $border-radius-button;
+  border-radius: $border-radius-button;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: pointer;
+  float: left;
+  font-size: $button-font-size;
+
+  // disables text selection on click
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.color-primary {
+  @extend %btn-green;
+}
+
+.color-secondary {
+  @extend %btn-grey;
+}
+
+.color-blue {
+  @extend %btn-blue;
+}
